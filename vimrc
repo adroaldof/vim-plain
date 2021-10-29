@@ -39,6 +39,18 @@ set visualbell                  " No sounds
 set autoread                    " Reload files changed outside vim
 set nrformats=                  " Set decimals numers as default
 set hidden                      " Hide buffers from editor window
+set nostartofline               " Stop certain movements from always going to the first char of a line
+set confirm                     " Raise a dialog instead of failing a command
+set showmatch                   " Show the matching brackets
+
+
+" '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' 
+" Cursor
+" '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' 
+
+set cursorline
+hi CursorLine cterm=NONE ctermbg=242
+hi CursorLineNr cterm=NONE ctermbg=Yellow ctermfg=Black gui=bold guibg=white
 
 
 " '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' 
@@ -143,6 +155,7 @@ set smartcase                   " When type capital use it
 " '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' 
 
 set laststatus=2                " Status line config
+
 function! GitBranch()
   return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
@@ -165,3 +178,12 @@ set statusline+=\ \|\ %{&fileformat}
 set statusline+=\ \|\ %p%%
 set statusline+=\ \|\ %l:%c
 set statusline+=\ \|
+
+
+" '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' 
+" Enable mouse
+" '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' 
+
+if has('mouse')
+    set mouse=a
+endif
