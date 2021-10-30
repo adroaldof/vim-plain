@@ -199,3 +199,14 @@ set statusline+=\ \|
 if has('mouse')
     set mouse=a
 endif
+
+
+" ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+" Navigate between views
+"  CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
+" ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
