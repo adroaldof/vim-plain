@@ -49,9 +49,14 @@ set lazyredraw                  " Redraw screen only when it is needed
 " Cursor
 " ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-set cursorline
-hi CursorLine cterm=NONE ctermbg=242
-hi CursorLineNr cterm=NONE ctermbg=Yellow ctermfg=Black gui=bold guibg=white
+set cursorline                  " Enable cursor line
+set cursorcolumn                " Enable cursor column
+
+hi CursorColumn ctermfg=NONE cterm=NONE ctermbg=237
+hi CursorLine ctermfg=NONE cterm=NONE ctermbg=237
+hi CursorLineNr ctermfg=Black cterm=NONE ctermbg=Yellow gui=bold guibg=white
+hi FoldColumn ctermfg=102 ctermbg=NONE cterm=NONE
+hi SignColumn ctermfg=187 ctermbg=NONE cterm=NONE
 
 
 " ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
