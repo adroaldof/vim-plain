@@ -2,25 +2,27 @@
 
 Yet another `vimrc` file. This is a high opinionated vim configurations file to use when no plugins can be used
 
+![YAVF Screenshot](./screenshot.png)
+
 ## Usage
 
 1. Clone this repo
 
-```bash
-git clone https://github.com/adroaldof/vimrc.git
-```
+    ```bash
+    git clone https://github.com/adroaldof/vimrc.git
+    ```
 
 1. Create a symbolic link to the vimrc file
 
-```bash
-ln -s <repo_path>/vimrc ~/.vimrc
-```
+    ```bash
+    ln -s <repo_path>/vimrc ~/.vimrc
+    ```
 
 1. Now just open your vim and start to happy type 
 
-```bash
-vim <your_project_file>
-```
+    ```bash
+    vim <your_project_file>
+    ```
 
 ## Some references
 
