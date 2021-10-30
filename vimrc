@@ -210,3 +210,14 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+
+" ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+" Show cursor only in the active view
+" ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+augroup cursor_off
+    autocmd!
+    autocmd WinLeave * set nocursorline nocursorcolumn
+    autocmd WinEnter * set cursorline nocursorcolumn
+augroup END
