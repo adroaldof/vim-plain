@@ -229,6 +229,25 @@ augroup END
 
 
 " ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+" Some remaps
+" ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+nnoremap Y y$                   " Yank until the end of line
+
+nnoremap n nzzzv                " Keep centered on next find word
+nnoremap N Nzzzv                " Keep centered on back find word
+nnoremap J mzJ`z                " Keep centered in line concatenation
+
+" Moving text around
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+
+
+" ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 " Highlight yanked text
 " ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
