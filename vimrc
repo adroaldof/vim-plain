@@ -52,11 +52,11 @@ set lazyredraw                  " Redraw screen only when it is needed
 set cursorline                  " Enable cursor line
 set cursorcolumn                " Enable cursor column
 
-hi CursorColumn ctermfg=NONE cterm=NONE ctermbg=237
-hi CursorLine ctermfg=NONE cterm=NONE ctermbg=237
-hi CursorLineNr ctermfg=Black cterm=NONE ctermbg=Yellow gui=bold guibg=white
-hi FoldColumn ctermfg=102 ctermbg=NONE cterm=NONE
-hi SignColumn ctermfg=187 ctermbg=NONE cterm=NONE
+hi CursorColumn ctermfg=NONE    cterm=NONE ctermbg=237      gui=bold
+hi CursorLine   ctermfg=NONE    cterm=NONE ctermbg=237      gui=bold    guibg=Red
+hi CursorLineNr ctermfg=Black   cterm=NONE ctermbg=Yellow   gui=bold    guibg=SeaGreen
+hi FoldColumn   ctermfg=102     cterm=NONE ctermbg=NONE
+hi SignColumn   ctermfg=187     cterm=NONE ctermbg=NONE
 
 
 " ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -224,7 +224,7 @@ nnoremap <c-l> <c-w>l
 augroup cursor_off
     autocmd!
     autocmd WinLeave * set nocursorline nocursorcolumn
-    autocmd WinEnter * set cursorline nocursorcolumn
+    autocmd WinEnter * set cursorline cursorcolumn
 augroup END
 
 
@@ -234,8 +234,8 @@ augroup END
 
 nnoremap Y y$                   " Yank until the end of line
 
-nnoremap n nzzzv                " Keep centered on next find word
-nnoremap N Nzzzv                " Keep centered on back find word
+nnoremap n nzzz                " Keep centered on next find word
+nnoremap N Nzzz                " Keep centered on back find word
 nnoremap J mzJ`z                " Keep centered in line concatenation
 
 " Moving text around
